@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>{% block title %}Base Title{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/base.css' %}">
+    </head>
+    <body>
+        {% include 'navbar.html' %}
+
+        {% if messages %}
+            {% for message in messages %}
+                <div id="message">{{message}}</div>
+            {% endfor %}
+        {% endif %}
+
+        {% block content %}
+        Base content
+        {% endblock %}
+    </body>
+</html>

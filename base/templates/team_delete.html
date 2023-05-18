@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Delete Team
+{% endblock %}
+
+{% block content %}
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <p>Delete {{team.name}}?</p>
+        <a href="{{request.META.HTTP_REFERER}}">Back</a>
+        <input type="submit" value="Confirm">
+    </form>
+</div>
+{% endblock %}

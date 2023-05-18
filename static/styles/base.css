@@ -1,0 +1,22 @@
+/*
+body {
+    background-color: lightcoral;
+}
+*/
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+#search {
+    width: 100%;
+}
+
+.login {
+    text-align: right;
+}
+
+#message {
+    color: red;
+}
